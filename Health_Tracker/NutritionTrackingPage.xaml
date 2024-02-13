@@ -1,0 +1,39 @@
+<!-- NutritionTrackingPage.xaml -->
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthTrackerApp.NutritionTrackingPage">
+
+	<StackLayout Padding="20">
+		<Label Text="Select Date:" />
+		<!-- Use DatePicker to select date -->
+		<DatePicker x:Name="datePicker" DateSelected="OnDateSelected" />
+
+		<Label Text="Enter Calories:" />
+		<!-- Use Entry to input calories -->
+		<Entry x:Name="caloriesEntry" Placeholder="Enter calories" />
+
+		<Label Text="Enter Food Eaten:" />
+		<!-- Use Entry to input food eaten -->
+		<Entry x:Name="foodEntry" Placeholder="Enter food eaten" />
+
+		<!-- Add a button to save or edit food intake -->
+		<Button Text="Edit Food Intake" Clicked="OnEditClicked" />
+
+		<!-- Display the food intake for the selected date -->
+		<Label x:Name="foodIntakeLabel" Text="" />
+
+		<!-- Display the list of food items consumed -->
+		<ListView x:Name="foodListView">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<TextCell Text="{Binding FoodName}" Detail="{Binding Calories}" />
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+
+		<!-- Display the total calories consumed for the selected date -->
+		<Label x:Name="totalCaloriesLabel" Text="" />
+	</StackLayout>
+
+</ContentPage>

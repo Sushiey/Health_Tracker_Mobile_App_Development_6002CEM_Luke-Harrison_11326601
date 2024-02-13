@@ -1,0 +1,28 @@
+﻿<!-- MainPage.xaml -->
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthTrackerApp.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Text="Welcome to Health Tracker App" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="0" />
+
+        <!-- Placeholder buttons for navigation -->
+        <Button Text="Track Activity" Clicked="OnTrackActivityClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1" Margin="0,10" />
+        <Button Text="Track Nutrition" Clicked="OnTrackNutritionClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="2" Margin="0,10" />
+        <Button Text="Set Reminders" Clicked="OnSetRemindersClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="3" Margin="0,10" />
+        <Button Text="BMI Tracking" Clicked="OnBmiTrackingClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="4" Margin="0,10" />
+        <Button Text="Weight Tracking" Clicked="OnWeightTrackingClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="5" Margin="0,10" />
+        <Button Text="Setting Goals" Clicked="OnSettingGoalsClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="6" Margin="0,10" />
+    </Grid>
+
+</ContentPage>

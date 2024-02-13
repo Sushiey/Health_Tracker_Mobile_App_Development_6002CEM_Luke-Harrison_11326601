@@ -1,0 +1,18 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthTrackerApp.ActivityTrackingPage">
+
+	<StackLayout Padding="20">
+		<!-- Add a DatePicker to select the date -->
+		<DatePicker x:Name="datePicker" DateSelected="OnDateSelected" />
+		<Label Text="Enter Step Count:" />
+		<!-- Use Entry to input step count -->
+		<Entry x:Name="stepEntry" Placeholder="Enter steps" />
+		<!-- Add a button to save or edit step count -->
+		<Button x:Name="editButton" Text="Save" Clicked="OnEditClicked" />
+		<!-- Display the selected date and step count for the chosen date -->
+		<Label x:Name="selectedDateLabel" Text="Selected Date: " />
+		<Label x:Name="stepCountLabel" Text="Step count for selected date: " />
+	</StackLayout>
+
+</ContentPage>
