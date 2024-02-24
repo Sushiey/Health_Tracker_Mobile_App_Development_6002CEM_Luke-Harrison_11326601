@@ -5,13 +5,10 @@
     <StackLayout Padding="20">
         <Label Text="Weight Tracking" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10" />
 
-        <!-- Input field for weight -->
         <Entry x:Name="weightEntry" Placeholder="Enter weight (kg)" Keyboard="Numeric" Margin="0,0,0,10" />
 
-        <!-- Button to save weight -->
         <Button Text="Save Weight" Clicked="OnSaveWeightClicked" HorizontalOptions="Center" Margin="0,10,0,0" />
 
-        <!-- Display the last saved weight -->
         <Label x:Name="lastWeightLabel" Text="" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,0" />
     </StackLayout>
 
