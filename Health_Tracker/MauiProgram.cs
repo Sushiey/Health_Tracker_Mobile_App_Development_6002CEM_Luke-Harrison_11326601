@@ -8,7 +8,7 @@ namespace Health_Tracker
         {
             var builder = MauiApp.CreateBuilder();
             builder
-                .UseMauiApp<HealthTrackerApp.App>() // Update namespace to HealthTrackerApp
+                .UseMauiApp<HealthTrackerApp.App>()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

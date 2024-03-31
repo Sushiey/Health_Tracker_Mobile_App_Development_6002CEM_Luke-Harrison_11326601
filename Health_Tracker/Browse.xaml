@@ -1,0 +1,30 @@
+<!-- Browse.xaml -->
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthTrackerApp.BrowsePage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Label Text="Browse" HorizontalOptions="Start" VerticalOptions="Center" Margin="20" />
+
+        <!-- Main Content -->
+        <ScrollView Grid.Row="1">
+            <StackLayout Spacing="20" Padding="20">
+                <!-- Buttons from MainPage.xaml -->
+                <Button Text="Track Activity" Clicked="OnTrackActivityClicked" />
+                <Button Text="Track Nutrition" Clicked="OnTrackNutritionClicked" />
+                <Button Text="Set Reminders" Clicked="OnSetRemindersClicked" />
+                <Button Text="BMI Tracking" Clicked="OnBmiTrackingClicked" />
+                <Button Text="Weight Tracking" Clicked="OnWeightTrackingClicked" />
+                <Button Text="Setting Goals" Clicked="OnSettingGoalsClicked" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
