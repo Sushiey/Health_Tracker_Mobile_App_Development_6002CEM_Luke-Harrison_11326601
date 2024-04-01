@@ -10,7 +10,6 @@ namespace HealthTrackerApp
             InitializeComponent();
         }
 
-        // Event handlers for button clicks (you can add your logic here)
         private async void OnTrackActivityClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ActivityTrackingPage());
@@ -43,31 +42,38 @@ namespace HealthTrackerApp
 
         private void OnSearchClicked(object sender, EventArgs e)
         {
-            // Add your search logic here
         }
 
         private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
         {
-            // Placeholder for search logic
-            // You can filter the list based on the entered text and update the UI accordingly
+            string searchText = e.NewTextValue.ToLowerInvariant();
+
+            foreach (View view in buttonStackLayout.Children)
+            {
+                if (view is Button button)
+                {
+                    string buttonText = button.Text.ToLowerInvariant();
+
+                    bool isVisible = string.IsNullOrEmpty(searchText) || buttonText.Contains(searchText);
+
+                    button.IsVisible = isVisible;
+                }
+            }
         }
 
-        // Placeholder method for the Summary button
-        private void OnSummaryClicked(object sender, EventArgs e)
+        private async void OnSummaryClicked(object sender, EventArgs e)
         {
-            // Implement logic for summary button clicked
+            await Navigation.PushAsync(new MainPage());
         }
 
-        // Placeholder method for the Sharing button
-        private void OnSharingClicked(object sender, EventArgs e)
+              private async void OnSharingClicked(object sender, EventArgs e)
         {
-            // Implement logic for sharing button clicked
+            await DisplayAlert("Share", "Share functionality will be implemented here", "OK");
         }
 
-        // Placeholder method for the Browse button
-        private void OnBrowseClicked(object sender, EventArgs e)
+           private void OnBrowseClicked(object sender, EventArgs e)
         {
-            // Implement logic for browse button clicked
+            
         }
     }
 }
