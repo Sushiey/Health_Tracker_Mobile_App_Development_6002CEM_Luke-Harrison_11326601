@@ -11,8 +11,8 @@ namespace HealthTrackerApp
 
         protected override bool OnBackButtonPressed()
         {
-            // Disable back button functionality
             return true;
         }
     }
 }
+

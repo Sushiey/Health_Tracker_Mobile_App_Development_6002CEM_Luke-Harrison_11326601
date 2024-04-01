@@ -2,59 +2,59 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HealthTrackerApp.BrowsePage">
 
-    <Grid BackgroundColor="Black">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+	<Grid BackgroundColor="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
 
-        <!-- Header with Icon -->
-        <Grid Grid.Row="0" BackgroundColor="#222222" Padding="10" HeightRequest="60">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Image Source="browse_icon.png" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start" VerticalOptions="Center" />
-            <Label Text="Browse" FontAttributes="Bold" TextColor="White" Grid.Column="1" VerticalOptions="Center" Margin="10,0,0,0" />
-        </Grid>
+		<!-- Header with Icon -->
+		<Grid Grid.Row="0" BackgroundColor="#F0F0F0" Padding="10" HeightRequest="60">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Image Source="icon.png" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start" VerticalOptions="Center" />
+			<Label Text="Browse" FontAttributes="Bold" TextColor="#333333" Grid.Column="1" VerticalOptions="Center" Margin="10,0,0,0" />
+		</Grid>
 
-        <!-- Search Box -->
-        <StackLayout Grid.Row="1" Orientation="Horizontal" Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-            <Grid HorizontalOptions="FillAndExpand">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Frame BackgroundColor="White" CornerRadius="5" Padding="0">
-                    <Entry Placeholder="Search" x:Name="SearchEntry" HorizontalOptions="FillAndExpand" />
-                </Frame>
-                <Button Text="Search" Clicked="OnSearchClicked" BackgroundColor="#333333" TextColor="White" Grid.Column="1" WidthRequest="80" />
-            </Grid>
-        </StackLayout>
+		<!-- Search Box -->
+		<StackLayout Grid.Row="1" Orientation="Horizontal" Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+			<Grid HorizontalOptions="FillAndExpand">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="Auto" />
+				</Grid.ColumnDefinitions>
+				<Frame BackgroundColor="White" CornerRadius="5" Padding="0">
+					<Entry Placeholder="Search" x:Name="SearchEntry" HorizontalOptions="FillAndExpand" />
+				</Frame>
+				<Button Text="Search" Clicked="OnSearchClicked" BackgroundColor="#CCCCCC" TextColor="Black" Grid.Column="1" WidthRequest="80" />
+			</Grid>
+		</StackLayout>
 
-        <!-- Main Content -->
-        <ScrollView Grid.Row="2">
-            <StackLayout Spacing="20" Padding="20">
-                <Button Text="Track Activity" Clicked="OnTrackActivityClicked" BackgroundColor="#333333" TextColor="White"/>
-                <Button Text="Track Nutrition" Clicked="OnTrackNutritionClicked" BackgroundColor="#333333" TextColor="White"/>
-                <Button Text="Set Reminders" Clicked="OnSetRemindersClicked" BackgroundColor="#333333" TextColor="White"/>
-                <Button Text="BMI Tracking" Clicked="OnBmiTrackingClicked" BackgroundColor="#333333" TextColor="White"/>
-                <Button Text="Weight Tracking" Clicked="OnWeightTrackingClicked" BackgroundColor="#333333" TextColor="White"/>
-                <Button Text="Setting Goals" Clicked="OnSettingGoalsClicked" BackgroundColor="#333333" TextColor="White"/>
-            </StackLayout>
-        </ScrollView>
+		<!-- Main Content -->
+		<ScrollView Grid.Row="2">
+			<StackLayout Spacing="20" Padding="20">
+				<Button Text="Track Activity" Clicked="OnTrackActivityClicked" BackgroundColor="#CCCCCC" TextColor="Black"/>
+				<Button Text="Track Nutrition" Clicked="OnTrackNutritionClicked" BackgroundColor="#CCCCCC" TextColor="Black"/>
+				<Button Text="Set Reminders" Clicked="OnSetRemindersClicked" BackgroundColor="#CCCCCC" TextColor="Black"/>
+				<Button Text="BMI Tracking" Clicked="OnBmiTrackingClicked" BackgroundColor="#CCCCCC" TextColor="Black"/>
+				<Button Text="Weight Tracking" Clicked="OnWeightTrackingClicked" BackgroundColor="#CCCCCC" TextColor="Black"/>
+				<Button Text="Setting Goals" Clicked="OnSettingGoalsClicked" BackgroundColor="#CCCCCC" TextColor="Black"/>
+			</StackLayout>
+		</ScrollView>
 
-        <!-- Buttons at the bottom -->
-        <BoxView Grid.Row="3" Color="#80000000" VerticalOptions="End" HeightRequest="60" />
-        <StackLayout Grid.Row="3" BackgroundColor="Transparent" Padding="10">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
-                <Button Text="Summary" Clicked="OnSummaryClicked" BackgroundColor="#333333" TextColor="White" />
-                <Button Text="Sharing" Clicked="OnSharingClicked" BackgroundColor="#333333" TextColor="White" />
-                <Button Text="Browse" Clicked="OnBrowseClicked" BackgroundColor="#222222" TextColor="White" />
-            </StackLayout>
-        </StackLayout>
-    </Grid>
+		<!-- Buttons at the bottom -->
+		<BoxView Grid.Row="3" Color="#CCCCCC" VerticalOptions="End" HeightRequest="60" />
+		<StackLayout Grid.Row="3" BackgroundColor="Transparent" Padding="10">
+			<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+				<Button Text="Summary" Clicked="OnSummaryClicked" BackgroundColor="#CCCCCC" TextColor="Black" />
+				<Button Text="Sharing" Clicked="OnSharingClicked" BackgroundColor="#CCCCCC" TextColor="Black" />
+				<Button Text="Browse" Clicked="OnBrowseClicked" BackgroundColor="#CCCCCC" TextColor="#022FBE" />
+			</StackLayout>
+		</StackLayout>
+	</Grid>
 
 </ContentPage>
