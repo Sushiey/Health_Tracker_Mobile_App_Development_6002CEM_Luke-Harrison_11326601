@@ -8,5 +8,11 @@ namespace HealthTrackerApp
         {
             InitializeComponent();
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            // Disable back button functionality
+            return true;
+        }
     }
 }

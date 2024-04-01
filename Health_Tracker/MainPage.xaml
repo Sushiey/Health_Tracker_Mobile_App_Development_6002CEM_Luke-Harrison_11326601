@@ -11,14 +11,14 @@
         </Grid.RowDefinitions>
 
         <!-- Summary header -->
-        <Frame Grid.Row="0" BackgroundColor="#222222" Padding="10" HasShadow="False" CornerRadius="0">
-            <Label Text="Summary" FontAttributes="Bold" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
-        </Frame>
-
-        <!-- Icon in top right -->
-        <Frame Grid.Row="0" BackgroundColor="#222222" Padding="10" HorizontalOptions="End" VerticalOptions="Start">
-            <Image Source="circle_icon.png" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" />
-        </Frame>
+        <Grid Grid.Row="0" BackgroundColor="#222222" Padding="10" HeightRequest="60">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="browse_icon.png" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Label Text="Browse" FontAttributes="Bold" TextColor="White" Grid.Column="1" VerticalOptions="Center" Margin="10,0,0,0" />
+        </Grid>
 
         <!-- Main content -->
         <Frame Grid.Row="1" BackgroundColor="#333333" CornerRadius="20" HasShadow="True" Margin="20" Padding="0">
