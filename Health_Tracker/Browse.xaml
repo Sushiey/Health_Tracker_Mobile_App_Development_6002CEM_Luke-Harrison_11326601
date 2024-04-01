@@ -5,8 +5,8 @@
     <Grid BackgroundColor="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
@@ -19,19 +19,21 @@
             <Label Text="Browse" FontAttributes="Bold" TextColor="#333333" Grid.Column="1" VerticalOptions="Center" Margin="10,0,0,0" />
         </Grid>
 
-        <StackLayout Grid.Row="1" Orientation="Horizontal" Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+        <StackLayout Grid.Row="1" Orientation="Horizontal" Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
             <Grid HorizontalOptions="FillAndExpand">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <Frame BackgroundColor="White" CornerRadius="5" Padding="0">
-                    <Entry Placeholder="Search" x:Name="SearchEntry" HorizontalOptions="FillAndExpand" TextChanged="OnSearchTextChanged" />
+                <Frame BackgroundColor="#EEEEEE" CornerRadius="20" Padding="10" HasShadow="False" VerticalOptions="Center">
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Placeholder="Search" x:Name="SearchEntry" HorizontalOptions="FillAndExpand" TextChanged="OnSearchTextChanged" />
+                        <Image Source="search_icon.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" />
+                    </StackLayout>
                 </Frame>
-                <Button Text="Search" Clicked="OnSearchClicked" BackgroundColor="#CCCCCC" TextColor="Black" Grid.Column="1" WidthRequest="80" />
             </Grid>
         </StackLayout>
-        
+
         <ScrollView Grid.Row="2">
             <StackLayout Grid.Row="2" Spacing="20" Padding="20" x:Name="buttonStackLayout">
                 <Button Text="Track Activity" Clicked="OnTrackActivityClicked" BackgroundColor="#CCCCCC" TextColor="Black"/>
