@@ -56,7 +56,21 @@
 ![Screenshot_20200924_062621_com companyname health_tracker](https://github.com/Sushiey/Health_Tracker_Mobile_App_Development_6002CEM_Luke-Harrison_11326601/assets/92340445/2f32b04a-1da6-4f59-87e0-29cbcdaa9316)
 ![Screenshot_20200924_062618_com companyname health_tracker](https://github.com/Sushiey/Health_Tracker_Mobile_App_Development_6002CEM_Luke-Harrison_11326601/assets/92340445/5ef98977-41ce-4687-a586-0235c2458369)
 ![Screenshot_20200924_062556_com companyname health_tracker](https://github.com/Sushiey/Health_Tracker_Mobile_App_Development_6002CEM_Luke-Harrison_11326601/assets/92340445/0c59457f-8f0e-4c36-942e-9b81f9b2bee7)
-![Screenshot_20200924_062539_com companyname health_tracker](https://github.com/Sushiey/Health_Tracker_Mobile_App_Development_6002CEM_Luke-Harrison_11326601/assets/92340445/fb4dbad3-6fc2-42f7-af6b-2eb1ad5db451)
+
+<table>
+  <tr>
+    <td><img src="image1.jpg" alt="![Screenshot_20200924_062539_com companyname health_tracker](https://github.com/Sushiey/Health_Tracker_Mobile_App_Development_6002CEM_Luke-Harrison_11326601/assets/92340445/fb4dbad3-6fc2-42f7-af6b-2eb1ad5db451)"></td>
+    <td><img src="image2.jpg" alt="Image 2"></td>
+  </tr>
+  <tr>
+    <td><img src="image3.jpg" alt="Image 3"></td>
+    <td><img src="image4.jpg" alt="Image 4"></td>
+  </tr>
+  <tr>
+    <td><img src="image5.jpg" alt="Image 5"></td>
+    <td><img src="image6.jpg" alt="Image 6"></td>
+  </tr>
+</table>
 
 
 
