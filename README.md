@@ -50,7 +50,6 @@
 
 ## :camera: Gallery
 
-<table>
   <tr>
     <td><img src="https://github.com/Sushiey/Health_Tracker_Mobile_App_Development_6002CEM_Luke-Harrison_11326601/assets/92340445/fb4dbad3-6fc2-42f7-af6b-2eb1ad5db451" alt="Screenshot 1" style="width:25%; padding:5px;"></td>
     <td><img src="https://github.com/Sushiey/Health_Tracker_Mobile_App_Development_6002CEM_Luke-Harrison_11326601/assets/92340445/0c59457f-8f0e-4c36-942e-9b81f9b2bee7" alt="Screenshot 2" style="width:25%; padding:5px;"></td>
