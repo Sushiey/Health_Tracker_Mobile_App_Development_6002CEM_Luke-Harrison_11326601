@@ -1,21 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HealthTrackerApp.ActivityTrackingPage">
 
-    <StackLayout Padding="20">
-        <Label Text="Activity Tracker" FontSize="Title" HorizontalOptions="Center" Margin="0,20,0,10" />
+    <StackLayout Padding="20" Spacing="15">
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+        <Label Text="Activity Tracker" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,20,0,10" />
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
             <DatePicker x:Name="datePicker" DateSelected="OnDateSelected" VerticalOptions="CenterAndExpand" />
-            <Button x:Name="editButton" Text="Save" Clicked="OnEditClicked" Margin="20,0,0,0" />
+            <Button x:Name="editButton" Text="Save" Clicked="OnEditClicked" BackgroundColor="#4CAF50" TextColor="White" CornerRadius="5" Margin="20,0,0,0" />
         </StackLayout>
 
         <Label x:Name="selectedDateLabel" Text="Selected Date:" FontSize="Medium" Margin="0,20,0,5" />
+
         <Label x:Name="stepCountLabel" Text="Step count for selected date:" FontSize="Medium" />
 
-        <Entry x:Name="stepEntry" Placeholder="Enter steps" Margin="0,20,0,0" />
+        <Entry x:Name="stepEntry" Placeholder="Enter steps" Keyboard="Numeric" Margin="0,20,0,0" />
 
         <Label x:Name="validationLabel" Text="" TextColor="Red" FontSize="Small" Margin="0,10,0,0" />
+
     </StackLayout>
 
 </ContentPage>

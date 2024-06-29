@@ -21,11 +21,11 @@ namespace HealthTrackerApp
 
         private void InitializePage()
         {
-            // Set initial date picker value to today's date
+        
             datePicker.Date = DateTime.Today;
             selectedDateLabel.Text = "Selected Date: " + datePicker.Date.ToString("MM/dd/yyyy");
 
-            // Load activity for the selected date
+
             LoadActivityForSelectedDate();
         }
 
@@ -33,7 +33,6 @@ namespace HealthTrackerApp
         {
             selectedDateLabel.Text = "Selected Date: " + e.NewDate.ToString("MM/dd/yyyy");
 
-            // Load activity for the selected date
             await LoadActivityForSelectedDate();
         }
 
@@ -52,7 +51,7 @@ namespace HealthTrackerApp
                 return;
             }
 
-            // Save or update activity for the selected date
+
             var selectedDate = datePicker.Date;
             var activity = new Activity
             {
@@ -62,11 +61,10 @@ namespace HealthTrackerApp
 
             await _activityRepository.SaveActivityAsync(activity);
 
-            // Update step count label and clear validation message
+
             stepCountLabel.Text = "Step count for selected date: " + steps.ToString();
             validationLabel.Text = "";
 
-            // Reload activity for the selected date
             await LoadActivityForSelectedDate();
         }
 

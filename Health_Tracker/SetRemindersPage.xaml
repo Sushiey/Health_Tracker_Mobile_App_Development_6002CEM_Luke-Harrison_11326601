@@ -3,14 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HealthTrackerApp.SetRemindersPage">
 
-    <StackLayout Padding="20">
+    <StackLayout Padding="20" Spacing="10">
         <Label Text="Set Reminder" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20" />
 
-        <Entry Placeholder="Enter reminder title" x:Name="TitleEntry" Margin="0,0,0,10" />
-        <DatePicker x:Name="DatePicker" Margin="0,0,0,10" />
-        <TimePicker x:Name="TimePicker" Margin="0,0,0,10" />
+        <Entry Placeholder="Enter reminder title" x:Name="TitleEntry" FontSize="18" />
 
-        <Button Text="Save Reminder" Clicked="OnSaveReminderClicked" HorizontalOptions="FillAndExpand" Margin="0,20,0,0" />
+        <StackLayout Orientation="Horizontal" Spacing="20">
+            <DatePicker x:Name="DatePicker" FontSize="18" />
+            <TimePicker x:Name="TimePicker" FontSize="18" />
+        </StackLayout>
+
+        <Button Text="Save Reminder" Clicked="OnSaveReminderClicked"
+                BackgroundColor="#4CAF50" TextColor="White" FontSize="18"
+                CornerRadius="10" HorizontalOptions="FillAndExpand" Margin="0,20,0,0" />
     </StackLayout>
 
 </ContentPage>

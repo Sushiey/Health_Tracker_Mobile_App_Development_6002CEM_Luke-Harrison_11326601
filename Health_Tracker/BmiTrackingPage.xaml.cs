@@ -11,26 +11,23 @@ namespace HealthTrackerApp
         {
             InitializeComponent();
 
-            // Set default units
             weightUnitPicker.SelectedIndex = 0; // kg
             heightUnitPicker.SelectedIndex = 0; // cm
         }
 
         private void OnWeightUnitChanged(object sender, EventArgs e)
         {
-            // Handle weight unit change (kg <-> lbs)
-            if (weightUnitPicker.SelectedIndex == 1) // lbs selected
+            if (weightUnitPicker.SelectedIndex == 1)
             {
-                // Convert weight to kg if it's currently in lbs
                 if (!string.IsNullOrEmpty(weightEntry.Text) && double.TryParse(weightEntry.Text, out double weightLbs))
                 {
                     double weightKg = weightLbs * PoundsToKilograms;
                     weightEntry.Text = weightKg.ToString("F1");
                 }
             }
-            else // kg selected
+            else
             {
-                // Convert weight to lbs if it's currently in kg
+               
                 if (!string.IsNullOrEmpty(weightEntry.Text) && double.TryParse(weightEntry.Text, out double weightKg))
                 {
                     double weightLbs = weightKg / PoundsToKilograms;
@@ -41,17 +38,17 @@ namespace HealthTrackerApp
 
         private void OnHeightUnitChanged(object sender, EventArgs e)
         {
-            // Handle height unit change (cm <-> ft/in)
-            if (heightUnitPicker.SelectedIndex == 1) // ft/in selected
+            
+            if (heightUnitPicker.SelectedIndex == 1) 
             {
-                // Convert height to cm if it's currently in ft/in
+               
                 if (!string.IsNullOrEmpty(heightEntry.Text) && ParseFeetAndInches(heightEntry.Text, out double heightFt, out double heightIn))
                 {
-                    double heightCm = (heightFt * 12 + heightIn) * 2.54; // Convert ft/in to cm
+                    double heightCm = (heightFt * 12 + heightIn) * 2.54; 
                     heightEntry.Text = heightCm.ToString("F1");
                 }
             }
-            // No conversion needed for cm, as it's the default unit
+          
         }
 
         private bool ParseFeetAndInches(string input, out double feet, out double inches)
@@ -59,10 +56,10 @@ namespace HealthTrackerApp
             feet = 0;
             inches = 0;
 
-            // Example input format: "5'10" or "5 ft 10 in"
+            
             if (input.Contains('\''))
             {
-                // Input format: feet'inches"
+                
                 string[] parts = input.Split('\'');
                 if (parts.Length == 2 && double.TryParse(parts[0], out feet) && parts[1].Contains('"'))
                 {
@@ -75,7 +72,7 @@ namespace HealthTrackerApp
             }
             else
             {
-                // Input format: feet ft inches in
+                
                 string[] parts = input.Split(new[] { "ft", "in" }, StringSplitOptions.RemoveEmptyEntries);
                 if (parts.Length == 2 && double.TryParse(parts[0], out feet) && double.TryParse(parts[1], out inches))
                 {
@@ -92,22 +89,22 @@ namespace HealthTrackerApp
                 double.TryParse(heightEntry.Text, out double height) &&
                 height > 0)
             {
-                // Convert height to meters if in cm
-                if (heightUnitPicker.SelectedIndex == 0) // cm
+                
+                if (heightUnitPicker.SelectedIndex == 0)
                 {
-                    height /= 100; // Convert cm to meters
+                    height /= 100;
                 }
 
-                // Calculate BMI
+                
                 double bmi = CalculateBMI(weight, height);
 
-                // Interpret BMI
+                
                 string bmiInterpretation = InterpretBMI(bmi);
 
-                // Display BMI and interpretation
+               
                 bmiLabel.Text = $"Your BMI is: {bmi:F2}\n{bmiInterpretation}";
 
-                // Example: Add a delay and animate the label
+               
                 AnimateBMIResult();
             }
             else

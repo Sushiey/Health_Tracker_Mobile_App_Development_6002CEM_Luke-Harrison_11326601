@@ -4,17 +4,17 @@
 
     <Grid BackgroundColor="White">
         <Grid.RowDefinitions>
-            <!-- Header -->
+      
             <RowDefinition Height="Auto" />
 
-            <!-- Main Content Area -->
+       
             <RowDefinition Height="*" />
 
-            <!-- Footer -->
+        
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <!-- Header -->
+
         <Grid Grid.Row="0" BackgroundColor="#E1E1E1" Padding="10" HeightRequest="60">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
@@ -24,7 +24,6 @@
             <Label Text="Summary" FontAttributes="Bold" TextColor="#333333" Grid.Column="1" VerticalOptions="Center" Margin="10,0,0,0" />
         </Grid>
 
-        <!-- Main Content Area -->
         <Frame Grid.Row="1" BackgroundColor="#F0F0F0" CornerRadius="20" HasShadow="True" Margin="20" Padding="0">
             <StackLayout Padding="20">
                 <Label Text="Welcome to Health Tracker!" HorizontalOptions="Center" TextColor="#333333" FontSize="24" FontAttributes="Bold" Margin="0,0,0,10" />
@@ -32,7 +31,7 @@
                 <Label Text="Track your health activities and nutrition to stay fit and healthy." 
                        HorizontalOptions="Center" TextColor="#666666" FontSize="16" Margin="0,0,0,20" />
 
-                <!-- Buttons with animations -->
+
                 <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
                     <Button Text="Track Activity" Clicked="OnTrackActivityClicked" BackgroundColor="#4CAF50" TextColor="White" CornerRadius="10" Margin="0,0,0,10">
                         <Button.Triggers>
@@ -68,14 +67,13 @@
                     </Button>
                 </StackLayout>
 
-                <!-- Labels to control button animations -->
                 <Label x:Name="TrackActivityLabel" IsVisible="false" />
                 <Label x:Name="TrackNutritionLabel" IsVisible="false" />
                 <Label x:Name="SetGoalsLabel" IsVisible="false" />
             </StackLayout>
         </Frame>
 
-        <!-- Footer -->
+
         <BoxView Grid.Row="2" Color="#CCCCCC" VerticalOptions="End" HeightRequest="60" />
         <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" BackgroundColor="Transparent" Padding="10">
             <Button Text="Summary" Clicked="OnSummaryClicked" BackgroundColor="#CCCCCC" TextColor="#022FBE" />
