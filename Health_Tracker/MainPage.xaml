@@ -4,11 +4,17 @@
 
     <Grid BackgroundColor="White">
         <Grid.RowDefinitions>
+            <!-- Header -->
             <RowDefinition Height="Auto" />
+
+            <!-- Main Content Area -->
             <RowDefinition Height="*" />
+
+            <!-- Footer -->
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
+        <!-- Header -->
         <Grid Grid.Row="0" BackgroundColor="#E1E1E1" Padding="10" HeightRequest="60">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
@@ -18,17 +24,63 @@
             <Label Text="Summary" FontAttributes="Bold" TextColor="#333333" Grid.Column="1" VerticalOptions="Center" Margin="10,0,0,0" />
         </Grid>
 
+        <!-- Main Content Area -->
         <Frame Grid.Row="1" BackgroundColor="#F0F0F0" CornerRadius="20" HasShadow="True" Margin="20" Padding="0">
-            <Label Text="Main Content" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="#333333" Margin="20" />
+            <StackLayout Padding="20">
+                <Label Text="Welcome to Health Tracker!" HorizontalOptions="Center" TextColor="#333333" FontSize="24" FontAttributes="Bold" Margin="0,0,0,10" />
+
+                <Label Text="Track your health activities and nutrition to stay fit and healthy." 
+                       HorizontalOptions="Center" TextColor="#666666" FontSize="16" Margin="0,0,0,20" />
+
+                <!-- Buttons with animations -->
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Track Activity" Clicked="OnTrackActivityClicked" BackgroundColor="#4CAF50" TextColor="White" CornerRadius="10" Margin="0,0,0,10">
+                        <Button.Triggers>
+                            <DataTrigger TargetType="Button" Binding="{Binding Source={x:Reference TrackActivityLabel}, Path=IsVisible}" Value="False">
+                                <Setter Property="BackgroundColor" Value="#4CAF50" />
+                            </DataTrigger>
+                            <DataTrigger TargetType="Button" Binding="{Binding Source={x:Reference TrackActivityLabel}, Path=IsVisible}" Value="True">
+                                <Setter Property="BackgroundColor" Value="#8BC34A" />
+                            </DataTrigger>
+                        </Button.Triggers>
+                    </Button>
+
+                    <Button Text="Track Nutrition" Clicked="OnTrackNutritionClicked" BackgroundColor="#2196F3" TextColor="White" CornerRadius="10" Margin="0,0,0,10">
+                        <Button.Triggers>
+                            <DataTrigger TargetType="Button" Binding="{Binding Source={x:Reference TrackNutritionLabel}, Path=IsVisible}" Value="False">
+                                <Setter Property="BackgroundColor" Value="#2196F3" />
+                            </DataTrigger>
+                            <DataTrigger TargetType="Button" Binding="{Binding Source={x:Reference TrackNutritionLabel}, Path=IsVisible}" Value="True">
+                                <Setter Property="BackgroundColor" Value="#64B5F6" />
+                            </DataTrigger>
+                        </Button.Triggers>
+                    </Button>
+
+                    <Button Text="Set Goals" Clicked="OnSetGoalsClicked" BackgroundColor="#FF9800" TextColor="White" CornerRadius="10" Margin="0,0,0,10">
+                        <Button.Triggers>
+                            <DataTrigger TargetType="Button" Binding="{Binding Source={x:Reference SetGoalsLabel}, Path=IsVisible}" Value="False">
+                                <Setter Property="BackgroundColor" Value="#FF9800" />
+                            </DataTrigger>
+                            <DataTrigger TargetType="Button" Binding="{Binding Source={x:Reference SetGoalsLabel}, Path=IsVisible}" Value="True">
+                                <Setter Property="BackgroundColor" Value="#FFC107" />
+                            </DataTrigger>
+                        </Button.Triggers>
+                    </Button>
+                </StackLayout>
+
+                <!-- Labels to control button animations -->
+                <Label x:Name="TrackActivityLabel" IsVisible="false" />
+                <Label x:Name="TrackNutritionLabel" IsVisible="false" />
+                <Label x:Name="SetGoalsLabel" IsVisible="false" />
+            </StackLayout>
         </Frame>
 
+        <!-- Footer -->
         <BoxView Grid.Row="2" Color="#CCCCCC" VerticalOptions="End" HeightRequest="60" />
-        <StackLayout Grid.Row="2" BackgroundColor="Transparent" Padding="10">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
-                <Button Text="Summary" Clicked="OnSummaryClicked" BackgroundColor="#CCCCCC" TextColor="#022FBE" />
-                <Button Text="Sharing" Clicked="OnSharingClicked" BackgroundColor="#CCCCCC" TextColor="#000" />
-                <Button Text="Browse" Clicked="OnBrowseClicked" BackgroundColor="#CCCCCC" TextColor="#000" />
-            </StackLayout>
+        <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" BackgroundColor="Transparent" Padding="10">
+            <Button Text="Summary" Clicked="OnSummaryClicked" BackgroundColor="#CCCCCC" TextColor="#022FBE" />
+            <Button Text="Sharing" Clicked="OnSharingClicked" BackgroundColor="#CCCCCC" TextColor="#000" />
+            <Button Text="Browse" Clicked="OnBrowseClicked" BackgroundColor="#CCCCCC" TextColor="#000" />
         </StackLayout>
     </Grid>
 

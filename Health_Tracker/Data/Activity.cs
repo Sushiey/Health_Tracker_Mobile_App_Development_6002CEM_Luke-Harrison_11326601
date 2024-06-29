@@ -13,3 +13,4 @@ namespace Health_Tracker.Data
         public int Steps { get; set; }
     }
 }
+

@@ -9,22 +9,37 @@ namespace HealthTrackerApp
             InitializeComponent();
         }
 
-        private void OnSummaryIconClicked(object sender, EventArgs e)
+        // Navigate to ActivityTrackingPage
+        private async void OnTrackActivityClicked(object sender, EventArgs e)
         {
-            
+            await Navigation.PushAsync(new ActivityTrackingPage());
         }
 
-        
-        private void OnSummaryClicked(object sender, EventArgs e)
+        // Navigate to NutritionTrackingPage
+        private async void OnTrackNutritionClicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new NutritionTrackingPage());
         }
 
-        private void OnSharingClicked(object sender, EventArgs e)
+        // Navigate to SettingGoalsPage
+        private async void OnSetGoalsClicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new SettingGoalsPage());
         }
 
+        // Example: Implement summary functionality
+        private async void OnSummaryClicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Summary", "YOUR ON IT MATEY", "OK");
+        }
+
+        // Example: Implement sharing functionality
+        private async void OnSharingClicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Sharing", "Implement sharing features.", "OK");
+        }
+
+        // Navigate to BrowsePage
         private async void OnBrowseClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new BrowsePage());
